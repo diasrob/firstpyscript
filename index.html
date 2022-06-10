@@ -14,9 +14,8 @@
 
 <body>
     <h1>
-        <b>Desenhando o histograma de uma distribuição Normal</b>
-    </h1>
-    <div id="plot"></div>
+        <c><b>Desenhando o histograma de uma distribuição Normal</b></c>
+    </h1>   
     <py-script output="plot">
         import matplotlib.pyplot as plt
         import numpy as np
@@ -27,6 +26,9 @@
         ax.hist(rv, bins=30)
         fig
     </py-script>  
+    <div id="plot">
+        <c> </c>
+    </div>
     <div>
         <py-repl id="meurepl" auto-generate="true"> </py-repl>
     </div>
