@@ -4,8 +4,6 @@
     <title>
         Imersão Dev - Aula 05
     </title>
-    <link href="https://diasrob.github.io/firstpyscript/style.css" rel="stylesheet" /> 
-    <script src="https://diasrob.github.io/firstpyscript/script.js"></script>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <py-env>
@@ -15,30 +13,19 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="page-title">
-            Aluraflix
-        </h1>                
-        <p class="page-subtitle">
-            Qual seu filme favorito?
-        </p>
-        <div class="form-wrapper">
-            <input type="text" id="filme" name="filme" placeholder="Insira endereço de imagem">
-            <button onClick="adicionarFilme()">Adicionar Filme</button>
-        </div>
-    </div>
-    
-    <h1>Desenhando o histograma de uma distribuição Normal</h1>
+    <h1>
+        Desenhando o histograma de uma distribuição Normal
+    </h1>
     <div id="plot"></div>
     <py-script output="plot">
-import matplotlib.pyplot as plt
-import numpy as np
+        import matplotlib.pyplot as plt
+        import numpy as np
         
-np.random.seed(42)
-rv = np.random.standard_normal(1000)
-fig, ax = plt.subplots()
-ax.hist(rv, bins=30)
-fig
+        np.random.seed(42)
+        rv = np.random.standard_normal(1000)
+        fig, ax = plt.subplots()
+        ax.hist(rv, bins=30)
+        fig
     </py-script>    
 </body>
 
