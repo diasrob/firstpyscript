@@ -8,6 +8,10 @@
     <script src="https://diasrob.github.io/firstpyscript/script.js"></script>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+      - numpy
+      - matplotlib
+    </py-env>
 </head>
 
 <body>
@@ -24,9 +28,17 @@
         </div>
     </div>
     
-    <py-script> 
-    print('Window area') 
-    print('Now you can!') 
+    <h1>Desenhando o histograma de uma distribuição Normal</h1>
+    <div id="plot"></div>
+    <py-script output="plot">
+import matplotlib.pyplot as plt
+import numpy as np
+        
+np.random.seed(42)
+rv = np.random.standard_normal(1000)
+fig, ax = plt.subplots()
+ax.hist(rv, bins=30)
+fig
     </py-script>    
 </body>
 
