@@ -14,7 +14,7 @@
 
 <body>
     <h1>
-        Desenhando o histograma de uma distribuição Normal
+        <b>Desenhando o histograma de uma distribuição Normal</b>
     </h1>
     <div id="plot"></div>
     <py-script output="plot">
@@ -26,7 +26,10 @@
         fig, ax = plt.subplots()
         ax.hist(rv, bins=30)
         fig
-    </py-script>    
+    </py-script>  
+    <div>
+        <py-repl> id="meurepl"="true"</py-repl>
+    </div>
 </body>
 
 </html>
